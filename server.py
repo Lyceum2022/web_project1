@@ -256,7 +256,7 @@ def play_level1():
                 arr_for_game = arr_for_game.split('--')
                 copy_arr_for_game = list()
                 for el in arr_for_game:
-                    if el == '/':
+                    if el == '/-':
                         copy_arr_for_game.append('')
                     else:
                         copy_arr_for_game += el
