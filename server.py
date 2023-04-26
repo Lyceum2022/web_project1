@@ -292,7 +292,10 @@ def play_level1():
             arr_of_values = list()
             for i in range(1, 47):
                 if request.form[str(i)]:
-                    arr_of_values += request.form[str(i)]
+                    if request.form[str(i)] != '-':
+                        arr_of_values += request.form[str(i)]
+                    else:
+                        arr_of_values.append('/')
                 else:
                     arr_of_values.append('/')
             db_sess = db_session.create_session()
